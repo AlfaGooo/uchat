@@ -217,7 +217,8 @@ bool mx_sql_create_user(char *login, char *password, char *email) {
     sqlite3 *db = NULL;
     t_table *column = NULL;
 
-    char *log[3] = {"NULL", login, password, email};
+    char *log[4] = {"NULL", login, password, email};
+    // char *log[3] = {login, password, email};
 
     //mx_push_t_table(&column, "id", "PRIMARY KEY", "INTEGER");
     mx_push_t_table(&column, "login", NULL, "TEXT"); //добавляем еще одну колонку

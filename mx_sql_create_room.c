@@ -24,16 +24,15 @@ typedef struct s_table {
     struct s_table *next;
 } t_table;
 
-room (id INTEGER PRIMARY KEY, name TEXT );
+// room (id INTEGER PRIMARY KEY, name TEXT);
 
-mx_push_t_table(&column_r, "id", "PRIMARY KEY", "INTEGER"); //table room
-mx_push_t_table(&column_r, "name", NULL, "TEXT"); // название комнаты
 
 bool mx_sql_create_room(char *login, char *password, char *email) {
     sqlite3 *db = NULL;
     t_table *column = NULL;
 
-    char *log[3] = {"NULL", login, password, email};
+    char *log[4] = {"NULL", login, password, email};
+    char *id_name[3] = {"NULL", "id", "name"};
 
     mx_push_t_table(&column, "id", "PRIMARY KEY", "INTEGER");
     mx_push_t_table(&column, "name", NULL, "TEXT"); //добавляем еще одну колонку
@@ -51,9 +50,9 @@ bool mx_sql_create_room(char *login, char *password, char *email) {
 
     return true;
     //в каком случае фолс?
+    //названия комнаты откуда брать как именовать?
 
 }
 
-if user enter to room сравнить пароль логин и емейл если есть то захожу
-потом заполняем таблицу логином
-
+// if user enter to room сравнить пароль логин и емейл если есть то захожу
+// потом заполняем таблицу логином
