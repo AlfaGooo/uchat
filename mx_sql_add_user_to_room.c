@@ -107,10 +107,10 @@ bool mx_sql_add_user_to_room(int room_id, int user_id) {
     mx_push_t_table(&column, "room_id", "PRIMARY KEY", "INTEGER");
     mx_push_t_table(&column, "user_id", "PRIMARY KEY", "INTEGER");
 
-    mx_push_data_table(&column, &res_r); //добавляем в структуру колонок реквизит с данными по каждой колонке
+    mx_push_data_table(&column, res_r->data); //добавляем в структуру колонок реквизит с данными по каждой колонке
     mx_insert_data(DATABASE_NAME, "users_room", &db, column);
 
-    mx_push_data_table(&column, &res_u); //добавляем в структуру колонок реквизит с данными по каждой колонке
+    mx_push_data_table(&column, res_u->data); //добавляем в структуру колонок реквизит с данными по каждой колонке
     mx_insert_data(DATABASE_NAME, "users_room", &db, column);
 
     return true;
