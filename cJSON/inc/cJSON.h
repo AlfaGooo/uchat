@@ -137,6 +137,9 @@ typedef int cJSON_bool;
 #define CJSON_NESTING_LIMIT 1000
 #endif
 
+//print json struct
+int print_preallocated(cJSON *root);
+
 /* returns the version of cJSON as a string */
 CJSON_PUBLIC(const char*) cJSON_Version(void);
 

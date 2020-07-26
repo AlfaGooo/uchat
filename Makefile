@@ -10,17 +10,17 @@ OPENSSL = -I./openssl/include -L./openssl/lib -lssl -lcrypto
 
 OBJ_DIR = obj
 
-CLIENT_INC = client/inc/client.h
+CLIENT_INC = inc/uchat.h
 
-SERVER_INC = server/inc/server.h
+SERVER_INC = inc/uchat.h
 
-CLIENT_INCS = client.h
+CLIENT_INCS = uchat.h
 
-SERVER_INCS = server.h
+SERVER_INCS = uchat.h
 
-CLIENT_SRC = client/src/client.c
+CLIENT_SRC = 
 
-SERVER_SRC = server/src/server.c
+SERVER_SRC = src/database/*.c
 
 CLIENT_SRCS = client.c
 
@@ -57,13 +57,11 @@ lib_install:
 client_install:
 	@cp $(CLIENT_INC) .
 	@cp $(CLIENT_SRC) .
-	@mkdir -p $(OBJ_DIR)
 	@clang -o $(CLIENT_NAME) $(CLIENT_SRCS) -I $(CLIENT_INCS) $(LIBS)
 
 server_install:
 	@cp $(SERVER_INC) .
 	@cp $(SERVER_SRC) .
-	@mkdir -p $(OBJ_DIR)
 	@clang -o $(SERVER_NAME) $(SERVER_SRCS) -lpthread -I $(SERVER_INCS) $(LIBS)
 
 install: lib_install client_install server_install

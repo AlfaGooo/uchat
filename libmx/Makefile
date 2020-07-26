@@ -76,7 +76,15 @@ SRC =  src/mx_atoi.c \
 	src/mx_swap_str.c \
 	src/mx_tolower.c \
 	src/mx_toupper.c \
-	src/mx_write_to_file.c
+	src/mx_write_to_file.c \
+	src/mx_arrdup.c \
+	src/mx_arr_size.c \
+	src/mx_stradd.c \
+	src/mx_replace_str.c \
+	src/mx_free_arr_list.c \
+	src/mx_arr_push_back.c \
+	src/mx_create_list_arr.c \
+	src/mx_print_list_arr.c
 
 SRCS =  mx_atoi.c \
 	mx_binary_search.c \
@@ -148,7 +156,15 @@ SRCS =  mx_atoi.c \
 	mx_swap_str.c \
 	mx_tolower.c \
 	mx_toupper.c \
-	mx_write_to_file.c
+	mx_write_to_file.c \
+	mx_arrdup.c \
+	mx_arr_size.c \
+	mx_stradd.c \
+	mx_replace_str.c \
+	mx_free_arr_list.c \
+	mx_arr_push_back.c \
+	mx_create_list_arr.c \
+    mx_print_list_arr.c
 
 OBJ_DIR = obj
 
@@ -222,7 +238,16 @@ OBJ =  obj/mx_atoi.o \
 	obj/mx_swap_str.o \
 	obj/mx_tolower.o \
 	obj/mx_toupper.o \
-	obj/mx_write_to_file.o
+	obj/mx_write_to_file.o \
+	obj/mx_arrdup.o \
+	obj/mx_arr_size.o \
+	obj/mx_stradd.o \
+	obj/mx_replace_str.o \
+	obj/mx_free_arr_list.o \
+	obj/mx_arr_push_back.o \
+	obj/mx_create_list_arr.o \
+    obj/mx_print_list_arr.o
+
 
 OBJS =  mx_atoi.o \
 	mx_binary_search.o \
@@ -294,8 +319,15 @@ OBJS =  mx_atoi.o \
 	mx_swap_str.o \
 	mx_tolower.o \
 	mx_toupper.o \
-	mx_write_to_file.o
-
+	mx_write_to_file.o \
+	mx_arrdup.o \
+	mx_arr_size.o \
+	mx_stradd.o \
+	mx_replace_str.o \
+	mx_free_arr_list.o \
+	mx_arr_push_back.o \
+	mx_create_list_arr.o \
+	mx_print_list_arr.o
 
 all: install uninstall
 install:

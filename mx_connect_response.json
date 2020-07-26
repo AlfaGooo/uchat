@@ -1,0 +1,6 @@
+{
+	"id": &time,
+	"type": "response",
+	"status": &status,
+	"operation": 0
+}

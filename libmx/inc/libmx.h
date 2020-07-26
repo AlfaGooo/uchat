@@ -6,6 +6,10 @@
 #include <stdbool.h>
 #include <fcntl.h>
 
+typedef struct s_arr {
+    char **data;
+    struct s_arr *next;
+} t_list_arr;
 
 typedef struct s_list {
 void *data;
@@ -83,5 +87,16 @@ void mx_swap_str(char **s1, char **s2);
 int mx_tolower(int c);
 int mx_toupper(int c);
 bool mx_write_to_file(const char *file, const char *str, char mode);
+char **mx_arrdup(char **data);
+int mx_arr_size(char **arr);
+void mx_stradd(char **str, char const *s);
+void mx_replace_str(char **str, const char *sub, const char *replace);
+
+//list_arr
+void mx_free_arr_list(t_list_arr **list);
+void mx_arr_push_back(t_list_arr **arr_list, char **data);
+t_list_arr *mx_create_list_arr(char **data);
+void mx_print_list_arr(t_list_arr *list);
+
 #endif
 
